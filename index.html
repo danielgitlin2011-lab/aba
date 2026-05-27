@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light"/>
   <title>Chefaleh — Private Chef Shabbat Delivery</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
@@ -25,7 +26,7 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; color-scheme: light; }
     body { background: #F9F7F2; color: #1A1A1A; font-family: 'Jost', sans-serif; }
 
     .gold-bar { height: 1px; background: linear-gradient(to right, transparent, #D4AF37, transparent); }
@@ -59,6 +60,14 @@
 
     /* zone card highlight */
     .zone-featured { background: #2C2C2C; border-top: 2px solid #D4AF37; }
+
+    /* Force light-mode colors in dark sections — prevents Chrome Android auto-dark from flipping text to black */
+    .bg-charcoal .text-cream,
+    .bg-charcoal h2, .bg-charcoal h3, .bg-charcoal h4,
+    .zone-featured h3, .zone-featured p,
+    #how-it-works h3, #how-it-works p {
+      -webkit-text-fill-color: initial;
+    }
 
     /* dish stagger */
     .dish-mid { margin-top: 3rem; }
