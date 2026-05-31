@@ -61,17 +61,34 @@
     /* zone card highlight */
     .zone-featured { background: #2C2C2C; border-top: 2px solid #D4AF37; }
 
-    /* Force light-mode colors in dark sections — prevents Chrome Android auto-dark from flipping text to black */
-    .bg-charcoal .text-cream,
-    .bg-charcoal h2, .bg-charcoal h3, .bg-charcoal h4,
-    .zone-featured h3, .zone-featured p,
-    #how-it-works h3, #how-it-works p {
-      -webkit-text-fill-color: initial;
-    }
-
     /* dish stagger */
     .dish-mid { margin-top: 3rem; }
     @media (max-width: 767px) { .dish-mid { margin-top: 0; } }
+
+    /* Explicit color overrides — Tailwind CDN opacity modifiers (text-cream/38 etc.)
+       can fail on some mobile browsers. These rules hardcode the exact rgba values. */
+    .text-cream\/38  { color: rgba(249,247,242,.38) !important; }
+    .text-cream\/22  { color: rgba(249,247,242,.22) !important; }
+    .text-cream\/28  { color: rgba(249,247,242,.28) !important; }
+    .text-cream\/30  { color: rgba(249,247,242,.30) !important; }
+    .text-cream\/48  { color: rgba(249,247,242,.48) !important; }
+    .text-cream\/20  { color: rgba(249,247,242,.20) !important; }
+    .text-cream\/18  { color: rgba(249,247,242,.18) !important; }
+    .text-charcoal\/38 { color: rgba(26,26,26,.38) !important; }
+    .text-charcoal\/55 { color: rgba(26,26,26,.55) !important; }
+    .text-charcoal\/48 { color: rgba(26,26,26,.48) !important; }
+    .text-charcoal\/50 { color: rgba(26,26,26,.50) !important; }
+    .text-charcoal\/40 { color: rgba(26,26,26,.40) !important; }
+    .text-gold\/75   { color: rgba(212,175,55,.75) !important; }
+    .text-gold\/10   { color: rgba(212,175,55,.10) !important; }
+    .text-gold\/20   { color: rgba(212,175,55,.20) !important; }
+
+    /* Background opacity modifiers */
+    .bg-white\/6  { background-color: rgba(255,255,255,.06) !important; }
+    .bg-white\/5  { background-color: rgba(255,255,255,.05) !important; }
+    .bg-gold\/6   { background-color: rgba(212,175,55,.06) !important; }
+    .bg-charcoal\/75 { background-color: rgba(26,26,26,.75) !important; }
+    .bg-charcoal\/40 { background-color: rgba(26,26,26,.40) !important; }
   </style>
 </head>
 <body>
