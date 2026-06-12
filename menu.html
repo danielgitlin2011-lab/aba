@@ -153,6 +153,45 @@
   <p class="text-cream/30 text-xs tracking-wider font-light">Orders placed by <strong class="text-gold/70 font-normal">Wednesday 5:00 PM</strong> arrive this Friday. Later orders arrive the following Friday.</p>
 </div>
 
+<!-- ── SUMMER MENU ANNOUNCEMENT ── -->
+<div style="background:#111;padding:72px 20px 68px;text-align:center;overflow:hidden;border-bottom:1px solid rgba(212,175,55,.15)">
+
+  <p id="summer-label" style="color:#D4AF37;font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.55em;text-transform:uppercase;font-weight:300;margin-bottom:28px;opacity:0;animation:summerFade .7s ease .1s forwards">Now Serving</p>
+
+  <div id="summer-title" style="font-family:'Cormorant Garamond',Georgia,serif;color:#F9F7F2;font-weight:300;line-height:1.05;margin-bottom:28px;font-size:clamp(3.4rem,9vw,7rem);display:flex;justify-content:center;flex-wrap:wrap"></div>
+
+  <div style="height:1px;background:linear-gradient(to right,transparent,#D4AF37,transparent);max-width:180px;margin:0 auto 28px;opacity:0;animation:summerFade .7s ease 1.3s forwards"></div>
+
+  <p id="summer-sub" style="color:rgba(249,247,242,.45);font-family:'Jost',sans-serif;font-size:.82rem;font-weight:300;letter-spacing:.1em;opacity:0;animation:summerFade .8s ease 1.5s forwards">We will be back with a full menu for chagim 2026</p>
+</div>
+
+<style>
+@keyframes summerLetterIn {
+  0%   { opacity:0; transform:translateY(55px) scale(.9); filter:blur(6px); }
+  60%  { filter:blur(0); }
+  100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0); }
+}
+@keyframes summerFade {
+  0%   { opacity:0; transform:translateY(18px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+</style>
+
+<script>
+(function(){
+  const words = ['Summer', ' ', 'Menu'];
+  const container = document.getElementById('summer-title');
+  let delay = 0.28;
+  words.join('').split('').forEach(ch => {
+    const s = document.createElement('span');
+    s.style.cssText = 'display:inline-block;opacity:0;animation:summerLetterIn .65s cubic-bezier(.22,1,.36,1) ' + delay.toFixed(2) + 's forwards';
+    s.textContent = ch;
+    container.appendChild(s);
+    delay += ch === ' ' ? 0.12 : 0.075;
+  });
+})();
+</script>
+
 <!-- STICKY SUBNAV -->
 <div class="snav sticky top-[65px] md:top-[72px] z-30 bg-cream border-b border-charcoal/8 overflow-x-auto">
   <div class="max-w-7xl mx-auto px-2 md:px-8 flex">
