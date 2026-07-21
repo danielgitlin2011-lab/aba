@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Make Perfect Israeli Salad — Chefaleh Journal</title>
+  <meta name="description" content="Knife skills, salting timing, and the small habits that separate a watery chop from a proper Israeli salad. A technique guide from Chefaleh's kitchen."/>
+  <link rel="canonical" href="https://chefaleh.com/blog/perfect-israeli-salad"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Chefaleh"/>
+  <meta property="og:title" content="How to Make Perfect Israeli Salad"/>
+  <meta property="og:description" content="Knife skills, salting timing, and the small habits that separate a watery chop from a proper Israeli salad."/>
+  <meta property="og:url" content="https://chefaleh.com/blog/perfect-israeli-salad"/>
+  <meta property="og:image" content="https://chefaleh.com/images/food5.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="How to Make Perfect Israeli Salad"/>
+  <meta name="twitter:description" content="Knife skills, salting timing, and the small habits that separate a watery chop from a proper Israeli salad."/>
+  <meta name="twitter:image" content="https://chefaleh.com/images/food5.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Make Perfect Israeli Salad",
+    "description": "Knife skills, salting timing, and the small habits that separate a watery chop from a proper Israeli salad.",
+    "image": "https://chefaleh.com/images/food5.jpg",
+    "author": { "@type": "Organization", "name": "Chefaleh" },
+    "publisher": { "@type": "Organization", "name": "Chefaleh", "logo": { "@type": "ImageObject", "url": "https://chefaleh.com/images/logo.png" } },
+    "datePublished": "2026-07-19",
+    "mainEntityOfPage": "https://chefaleh.com/blog/perfect-israeli-salad"
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-40 bg-cream border-b border-charcoal/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+    <a href="../index.html" class="font-serif text-xl md:text-2xl tracking-[.2em] text-charcoal font-light">CHEFALEH</a>
+
+    <div class="hidden md:flex items-center gap-8 text-xs tracking-[.2em] uppercase font-medium">
+      <a href="../index.html" class="text-charcoal hover:text-gold transition-colors">Home</a>
+      <a href="../about.html" class="text-charcoal hover:text-gold transition-colors">About</a>
+      <a href="../menu.html"  class="text-charcoal hover:text-gold transition-colors">Menu</a>
+      <a href="../blogs.html" class="text-gold">Journal</a>
+      <button onclick="openDrawer()" class="relative flex items-center gap-2 bg-gold text-charcoal px-5 py-2 hover:bg-charcoal hover:text-cream transition-all font-medium">
+        Cart
+        <span class="cart-count-badge hidden w-5 h-5 rounded-full bg-charcoal text-cream text-[10px] items-center justify-center font-medium">0</span>
+      </button>
+    </div>
+
+    <div class="flex md:hidden items-center gap-2">
+      <button onclick="openDrawer()" class="relative flex items-center bg-gold text-charcoal px-3 py-2 text-[10px] tracking-[.15em] uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">
+        Cart
+        <span class="cart-count-badge hidden ml-1.5 w-4 h-4 rounded-full bg-charcoal text-cream text-[9px] items-center justify-center font-medium">0</span>
+      </button>
+      <button id="ham-btn" aria-label="Menu" class="flex flex-col justify-center items-center gap-[5px] w-8 h-8" onclick="toggleMenu()">
+        <span id="ham1" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+        <span id="ham2" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+        <span id="ham3" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden flex-col bg-cream border-t border-charcoal/10 px-5 pb-5 pt-3 gap-0">
+    <a href="../index.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">Home</a>
+    <a href="../about.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">About</a>
+    <a href="../menu.html"  class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">Menu</a>
+    <a href="../blogs.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-gold border-b border-charcoal/8">Journal</a>
+    <button onclick="openDrawer()" class="w-full text-left block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors">Cart</button>
+  </div>
+</nav>
+
+<!-- CART DRAWER -->
+<div id="drawer-overlay" class="fixed inset-0 bg-charcoal/40 z-50 hidden" onclick="closeDrawer()"></div>
+<div id="drawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-full bg-cream z-50 flex flex-col shadow-2xl transition-transform duration-350 ease-in-out translate-x-full" style="transform:translateX(100%)">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-charcoal/10">
+    <h3 class="font-serif text-xl text-charcoal font-light">Your Cart</h3>
+    <button onclick="closeDrawer()" class="text-charcoal/40 hover:text-charcoal text-xl">✕</button>
+  </div>
+  <div id="drawer-items" class="flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
+  <div class="border-t border-charcoal/10 px-6 py-5 space-y-2 bg-cream-dark">
+    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Subtotal</span><span id="d-sub">$0.00</span></div>
+    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Tax (7%)</span><span id="d-tax">$0.00</span></div>
+    <div class="flex justify-between text-sm text-charcoal font-medium pt-2 border-t border-charcoal/10"><span>Estimated Total</span><span id="d-tot">$0.00</span></div>
+    <a href="../checkout.html" class="w-full block mt-4 bg-gold text-charcoal text-center py-3 text-xs tracking-widest uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">Proceed to Checkout</a>
+  </div>
+</div>
+
+<!-- ARTICLE HEADER -->
+<header class="pt-32 md:pt-40 pb-10 md:pb-14 bg-cream text-center px-5">
+  <p class="text-xs text-charcoal/40 font-light mb-5">
+    <a href="../blogs.html" class="hover:text-gold transition-colors">Journal</a> &middot; Technique &middot; 5 min read
+  </p>
+  <h1 class="font-serif text-charcoal font-light max-w-3xl mx-auto" style="font-size:clamp(2rem,5vw,3.4rem);line-height:1.15">How to Make Perfect Israeli Salad</h1>
+  <div class="gold-bar max-w-xs mx-auto my-7"></div>
+  <p class="text-charcoal/50 text-sm font-light max-w-xl mx-auto">Knife skills, salting timing, and the small habits that separate a watery chop from a proper Israeli salad.</p>
+</header>
+
+<div class="max-w-4xl mx-auto px-5">
+  <div class="hover-zoom" style="height:340px; max-height:50vh;">
+    <img src="../images/food5.jpg" alt="Finely diced Israeli salad in a white bowl" class="w-full h-full object-cover" width="1200" height="1600" fetchpriority="high"/>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="max-w-2xl mx-auto px-5 py-16 md:py-20 prose-blog">
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Israeli salad looks like the simplest thing on the table — tomato, cucumber, a little onion, a squeeze of lemon. And yet most home versions come out watery, unevenly cut, and wilted within twenty minutes. The ingredient list is short. The technique is where it actually gets made or broken.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">Dice Size Is Not a Style Choice</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    A proper Israeli salad is cut small — closer to a fine dice than a chop, ideally 3–5mm per piece. This isn't about aesthetics. Smaller pieces mean more surface area contacting the dressing, so every bite carries lemon, oil and salt evenly instead of pooling in the bottom of the bowl. Use a sharp knife, not a food processor — the blade shears cleanly through tomato flesh, while a processor's blunt impact crushes cell walls and releases excess liquid before the salad even hits the bowl.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">Salt at the Very End, Not the Beginning</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Salt draws water out of cucumber and tomato through osmosis — that's exactly what you want in a Greek salad you'll eat within the hour, and exactly what ruins an Israeli salad meant to hold at a Shabbat table for a few hours. Season with salt only right before serving, never while prepping. If you're making it ahead, keep the dressed vegetables and the salt separate until minutes before the table.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">Deseed the Watery Parts</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Tomato gel and cucumber seeds hold most of the vegetable's water content. Scoop the seedy core out of the tomato before dicing, and consider halving and scraping cucumbers if they're the seedy variety (Persian or English cucumbers need less of this — their seeds are smaller and less watery, which is part of why they're the standard choice here). This single step prevents more sogginess than any amount of extra salt-draining time.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">Dress With Fat First, Acid Second</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Toss the diced vegetables with olive oil first, letting it coat every surface — this creates a light barrier that slows how quickly the lemon juice pulls moisture out. Add the lemon juice and herbs (parsley, mint, or both) right before serving, not during prep. Order matters more than most people assume: oil-then-acid holds its texture noticeably longer than acid-then-oil.
+  </p>
+
+  <div class="bg-cream-dark border-l-2 border-gold p-6 md:p-7 my-10">
+    <p class="text-charcoal/70 text-sm font-light leading-relaxed"><strong class="text-charcoal font-medium">Chefaleh's kitchen note:</strong> we dice each batch to order rather than prepping it hours in advance — for a salad this simple, freshness at the moment of dicing is most of what separates a good version from a forgettable one.</p>
+  </div>
+
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    None of this requires special equipment or rare ingredients — just a sharp knife, a little restraint with the salt, and dressing at the right moment. Get those three things right and the "simple" salad becomes the dish people ask for the recipe of.
+  </p>
+</article>
+
+<!-- CTA -->
+<section class="py-16 md:py-20 bg-charcoal text-center">
+  <div class="max-w-xl mx-auto px-5">
+    <p class="text-gold text-[10px] tracking-[.4em] uppercase mb-4 font-light">Fresh, Diced to Order</p>
+    <h2 class="font-serif text-cream font-light mb-6" style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Add It to Your Shabbat Table This Week</h2>
+    <a href="../menu.html" class="inline-block bg-gold text-charcoal px-11 md:px-14 py-4 text-[11px] tracking-[.28em] uppercase font-medium hover:bg-white transition-all duration-300">View the Menu</a>
+  </div>
+</section>
+
+<!-- MORE FROM THE JOURNAL -->
+<section class="py-16 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <p class="text-gold text-[10px] tracking-[.35em] uppercase mb-6 font-light text-center">More From the Journal</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <a href="slow-braised-shabbat-brisket" class="group block">
+        <h3 class="font-serif text-charcoal text-xl font-light group-hover:text-gold transition-colors">The Art of Slow-Braised Shabbat Brisket</h3>
+        <p class="text-charcoal/50 text-sm font-light mt-2">Why low and slow beats hot and fast.</p>
+      </a>
+      <a href="silky-homemade-hummus" class="group block">
+        <h3 class="font-serif text-charcoal text-xl font-light group-hover:text-gold transition-colors">The Secret to Silky Homemade Hummus</h3>
+        <p class="text-charcoal/50 text-sm font-light mt-2">The baking-soda trick and blending method that get you there.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal border-t border-cream/5 py-14 md:py-16">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
+      <div class="col-span-2 md:col-span-2">
+        <a href="../index.html" class="font-serif text-2xl tracking-[.2em] text-cream font-light block mb-4">CHEFALEH</a>
+        <p class="text-cream/30 text-xs font-light leading-relaxed max-w-xs">Private chef–driven Shabbat &amp; event catering. South Florida's finest kosher culinary experience.</p>
+        <p class="text-cream/20 text-xs mt-4 font-light">(305) 985-0770</p>
+      </div>
+      <div>
+        <p class="text-cream/40 text-xs tracking-[.2em] uppercase mb-4 md:mb-5 font-light">Navigate</p>
+        <div class="flex flex-col gap-3 text-sm font-light text-cream/30">
+          <a href="../index.html" class="hover:text-gold transition-colors">Home</a>
+          <a href="../about.html" class="hover:text-gold transition-colors">About</a>
+          <a href="../menu.html"  class="hover:text-gold transition-colors">Menu</a>
+          <a href="../blogs.html" class="hover:text-gold transition-colors">Journal</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-cream/40 text-xs tracking-[.2em] uppercase mb-4 md:mb-5 font-light">Order Info</p>
+        <div class="text-xs font-light text-cream/30 space-y-2">
+          <p>Deadline: <span class="text-gold">Wednesday 5:00 PM Miami</span></p>
+          <p>Delivery: <span class="text-cream/50">Friday 3–5 PM</span></p>
+          <p class="mt-3 text-cream/20">1622 NE 205th Terrace<br/>Miami, FL 33179</p>
+        </div>
+      </div>
+    </div>
+    <div class="gold-bar mb-6 md:mb-8"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-cream/20">
+      <p>© 2026 Chefaleh Kosher Catering. All rights reserved.</p>
+      <div class="flex gap-4 md:gap-6">
+        <a href="../privacy-policy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="../terms-of-use.html" class="hover:text-gold transition-colors">Terms of Use</a>
+        <a href="../cookie-policy.html" class="hover:text-gold transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../cart.js"></script>
+</body>
+</html>

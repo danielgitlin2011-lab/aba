@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Secret to Silky Homemade Hummus — Chefaleh Journal</title>
+  <meta name="description" content="It's not the tahini brand — it's technique. The baking-soda trick and blending method that turn ordinary chickpeas into silky, restaurant-style hummus."/>
+  <link rel="canonical" href="https://chefaleh.com/blog/silky-homemade-hummus"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Chefaleh"/>
+  <meta property="og:title" content="The Secret to Silky Homemade Hummus"/>
+  <meta property="og:description" content="It's not the tahini brand — it's technique. The baking-soda trick and blending method that get you there."/>
+  <meta property="og:url" content="https://chefaleh.com/blog/silky-homemade-hummus"/>
+  <meta property="og:image" content="https://chefaleh.com/images/food1.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="The Secret to Silky Homemade Hummus"/>
+  <meta name="twitter:description" content="It's not the tahini brand — it's technique. The baking-soda trick and blending method that get you there."/>
+  <meta name="twitter:image" content="https://chefaleh.com/images/food1.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Secret to Silky Homemade Hummus",
+    "description": "It's not the tahini brand — it's technique. The baking-soda trick and blending method that turn ordinary chickpeas into silky hummus.",
+    "image": "https://chefaleh.com/images/food1.jpg",
+    "author": { "@type": "Organization", "name": "Chefaleh" },
+    "publisher": { "@type": "Organization", "name": "Chefaleh", "logo": { "@type": "ImageObject", "url": "https://chefaleh.com/images/logo.png" } },
+    "datePublished": "2026-07-21",
+    "mainEntityOfPage": "https://chefaleh.com/blog/silky-homemade-hummus"
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-40 bg-cream border-b border-charcoal/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+    <a href="../index.html" class="font-serif text-xl md:text-2xl tracking-[.2em] text-charcoal font-light">CHEFALEH</a>
+
+    <div class="hidden md:flex items-center gap-8 text-xs tracking-[.2em] uppercase font-medium">
+      <a href="../index.html" class="text-charcoal hover:text-gold transition-colors">Home</a>
+      <a href="../about.html" class="text-charcoal hover:text-gold transition-colors">About</a>
+      <a href="../menu.html"  class="text-charcoal hover:text-gold transition-colors">Menu</a>
+      <a href="../blogs.html" class="text-gold">Journal</a>
+      <button onclick="openDrawer()" class="relative flex items-center gap-2 bg-gold text-charcoal px-5 py-2 hover:bg-charcoal hover:text-cream transition-all font-medium">
+        Cart
+        <span class="cart-count-badge hidden w-5 h-5 rounded-full bg-charcoal text-cream text-[10px] items-center justify-center font-medium">0</span>
+      </button>
+    </div>
+
+    <div class="flex md:hidden items-center gap-2">
+      <button onclick="openDrawer()" class="relative flex items-center bg-gold text-charcoal px-3 py-2 text-[10px] tracking-[.15em] uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">
+        Cart
+        <span class="cart-count-badge hidden ml-1.5 w-4 h-4 rounded-full bg-charcoal text-cream text-[9px] items-center justify-center font-medium">0</span>
+      </button>
+      <button id="ham-btn" aria-label="Menu" class="flex flex-col justify-center items-center gap-[5px] w-8 h-8" onclick="toggleMenu()">
+        <span id="ham1" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+        <span id="ham2" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+        <span id="ham3" class="block w-5 h-[1.5px] bg-charcoal transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden flex-col bg-cream border-t border-charcoal/10 px-5 pb-5 pt-3 gap-0">
+    <a href="../index.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">Home</a>
+    <a href="../about.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">About</a>
+    <a href="../menu.html"  class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors border-b border-charcoal/8">Menu</a>
+    <a href="../blogs.html" class="block py-3 text-xs tracking-[.2em] uppercase font-medium text-gold border-b border-charcoal/8">Journal</a>
+    <button onclick="openDrawer()" class="w-full text-left block py-3 text-xs tracking-[.2em] uppercase font-medium text-charcoal hover:text-gold transition-colors">Cart</button>
+  </div>
+</nav>
+
+<!-- CART DRAWER -->
+<div id="drawer-overlay" class="fixed inset-0 bg-charcoal/40 z-50 hidden" onclick="closeDrawer()"></div>
+<div id="drawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-full bg-cream z-50 flex flex-col shadow-2xl transition-transform duration-350 ease-in-out translate-x-full" style="transform:translateX(100%)">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-charcoal/10">
+    <h3 class="font-serif text-xl text-charcoal font-light">Your Cart</h3>
+    <button onclick="closeDrawer()" class="text-charcoal/40 hover:text-charcoal text-xl">✕</button>
+  </div>
+  <div id="drawer-items" class="flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
+  <div class="border-t border-charcoal/10 px-6 py-5 space-y-2 bg-cream-dark">
+    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Subtotal</span><span id="d-sub">$0.00</span></div>
+    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Tax (7%)</span><span id="d-tax">$0.00</span></div>
+    <div class="flex justify-between text-sm text-charcoal font-medium pt-2 border-t border-charcoal/10"><span>Estimated Total</span><span id="d-tot">$0.00</span></div>
+    <a href="../checkout.html" class="w-full block mt-4 bg-gold text-charcoal text-center py-3 text-xs tracking-widest uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">Proceed to Checkout</a>
+  </div>
+</div>
+
+<!-- ARTICLE HEADER -->
+<header class="pt-32 md:pt-40 pb-10 md:pb-14 bg-cream text-center px-5">
+  <p class="text-xs text-charcoal/40 font-light mb-5">
+    <a href="../blogs.html" class="hover:text-gold transition-colors">Journal</a> &middot; Technique &middot; 6 min read
+  </p>
+  <h1 class="font-serif text-charcoal font-light max-w-3xl mx-auto" style="font-size:clamp(2rem,5vw,3.4rem);line-height:1.15">The Secret to Silky Homemade Hummus</h1>
+  <div class="gold-bar max-w-xs mx-auto my-7"></div>
+  <p class="text-charcoal/50 text-sm font-light max-w-xl mx-auto">It's not the tahini brand — it's technique. The baking-soda trick and blending method that get you there.</p>
+</header>
+
+<div class="max-w-4xl mx-auto px-5">
+  <div class="hover-zoom" style="height:340px; max-height:50vh;">
+    <img src="../images/food1.jpg" alt="Fresh hummus bowl on a Shabbat table" class="w-full h-full object-cover" style="object-position:82% 20%" width="1600" height="889" fetchpriority="high"/>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="max-w-2xl mx-auto px-5 py-16 md:py-20 prose-blog">
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Ask ten people why their homemade hummus never tastes like the version from a good Israeli restaurant, and nine of them will blame the tahini. The tahini matters, but it's rarely the real problem. The real problem is almost always the chickpeas — specifically, what you do to them before they ever reach the blender.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">The Skins Are the Enemy</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Every chickpea is wrapped in a thin skin that turns gritty once blended. Restaurant-style hummus is silky specifically because most of those skins have been removed before blending. You don't need to peel each chickpea by hand — there's a much faster way.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">The Baking Soda Trick</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    <strong class="text-charcoal font-medium">1. If cooking from dried chickpeas</strong> (strongly preferred over canned for this dish), soak them overnight with a half teaspoon of baking soda added to the soaking water. The alkalinity starts breaking down the pectin in the skins before cooking even begins.
+  </p>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    <strong class="text-charcoal font-medium">2. Cook them the same way</strong> — drain the soaked chickpeas, then simmer with another half teaspoon of baking soda added to the fresh cooking water. Within a few minutes you'll see the skins start to loosen and float free; the chickpeas themselves turn noticeably softer and more matte in color. Cook until they're falling-apart tender, well past the point most people stop — hummus rewards overcooked chickpeas far more than al dente ones.
+  </p>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    <strong class="text-charcoal font-medium">3. Using canned chickpeas?</strong> Simmer them for 15–20 minutes in fresh water with the same half teaspoon of baking soda. It won't match dried chickpeas cooked from scratch, but it meaningfully improves texture over blending them straight from the can.
+  </p>
+
+  <h2 class="text-charcoal font-light mt-10 mb-4" style="font-size:1.6rem">Blend the Tahini and Lemon First</h2>
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Before the chickpeas go anywhere near the blender, process the tahini with lemon juice, garlic and ice water on their own until the mixture turns pale, thick and fluffy — this can take a full minute or two and looks briefly like it's seizing before it smooths out. This step builds the emulsion that gives hummus its body. Only once that base is silky do the warm, well-cooked chickpeas go in, blended until completely smooth. Adding cold water a tablespoon at a time while blending — rather than all at once — is what gets hummus to that whipped, cloud-like texture instead of a thick paste.
+  </p>
+
+  <div class="bg-cream-dark border-l-2 border-gold p-6 md:p-7 my-10">
+    <p class="text-charcoal/70 text-sm font-light leading-relaxed"><strong class="text-charcoal font-medium">Chefaleh's kitchen note:</strong> we blend hummus far longer than feels necessary — a good two to three minutes on high — because the difference between "smooth" and "silky" almost always comes down to blend time, not a secret ingredient.</p>
+  </div>
+
+  <p class="text-charcoal/70 text-base font-light leading-relaxed">
+    Skip the skins, overcook the chickpeas on purpose, build the tahini emulsion first, and blend longer than feels reasonable. Do those four things and the tahini brand stops mattering nearly as much as everyone assumes.
+  </p>
+</article>
+
+<!-- CTA -->
+<section class="py-16 md:py-20 bg-charcoal text-center">
+  <div class="max-w-xl mx-auto px-5">
+    <p class="text-gold text-[10px] tracking-[.4em] uppercase mb-4 font-light">Made Fresh, Blended to Order</p>
+    <h2 class="font-serif text-cream font-light mb-6" style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Add Our Hummus to This Week's Order</h2>
+    <a href="../menu.html" class="inline-block bg-gold text-charcoal px-11 md:px-14 py-4 text-[11px] tracking-[.28em] uppercase font-medium hover:bg-white transition-all duration-300">View the Menu</a>
+  </div>
+</section>
+
+<!-- MORE FROM THE JOURNAL -->
+<section class="py-16 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <p class="text-gold text-[10px] tracking-[.35em] uppercase mb-6 font-light text-center">More From the Journal</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <a href="slow-braised-shabbat-brisket" class="group block">
+        <h3 class="font-serif text-charcoal text-xl font-light group-hover:text-gold transition-colors">The Art of Slow-Braised Shabbat Brisket</h3>
+        <p class="text-charcoal/50 text-sm font-light mt-2">Why low and slow beats hot and fast.</p>
+      </a>
+      <a href="perfect-israeli-salad" class="group block">
+        <h3 class="font-serif text-charcoal text-xl font-light group-hover:text-gold transition-colors">How to Make Perfect Israeli Salad</h3>
+        <p class="text-charcoal/50 text-sm font-light mt-2">Knife skills, salting timing, and the habits that matter.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal border-t border-cream/5 py-14 md:py-16">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
+      <div class="col-span-2 md:col-span-2">
+        <a href="../index.html" class="font-serif text-2xl tracking-[.2em] text-cream font-light block mb-4">CHEFALEH</a>
+        <p class="text-cream/30 text-xs font-light leading-relaxed max-w-xs">Private chef–driven Shabbat &amp; event catering. South Florida's finest kosher culinary experience.</p>
+        <p class="text-cream/20 text-xs mt-4 font-light">(305) 985-0770</p>
+      </div>
+      <div>
+        <p class="text-cream/40 text-xs tracking-[.2em] uppercase mb-4 md:mb-5 font-light">Navigate</p>
+        <div class="flex flex-col gap-3 text-sm font-light text-cream/30">
+          <a href="../index.html" class="hover:text-gold transition-colors">Home</a>
+          <a href="../about.html" class="hover:text-gold transition-colors">About</a>
+          <a href="../menu.html"  class="hover:text-gold transition-colors">Menu</a>
+          <a href="../blogs.html" class="hover:text-gold transition-colors">Journal</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-cream/40 text-xs tracking-[.2em] uppercase mb-4 md:mb-5 font-light">Order Info</p>
+        <div class="text-xs font-light text-cream/30 space-y-2">
+          <p>Deadline: <span class="text-gold">Wednesday 5:00 PM Miami</span></p>
+          <p>Delivery: <span class="text-cream/50">Friday 3–5 PM</span></p>
+          <p class="mt-3 text-cream/20">1622 NE 205th Terrace<br/>Miami, FL 33179</p>
+        </div>
+      </div>
+    </div>
+    <div class="gold-bar mb-6 md:mb-8"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-cream/20">
+      <p>© 2026 Chefaleh Kosher Catering. All rights reserved.</p>
+      <div class="flex gap-4 md:gap-6">
+        <a href="../privacy-policy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="../terms-of-use.html" class="hover:text-gold transition-colors">Terms of Use</a>
+        <a href="../cookie-policy.html" class="hover:text-gold transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../cart.js"></script>
+</body>
+</html>
