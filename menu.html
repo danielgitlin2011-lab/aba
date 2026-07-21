@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu — Chefaleh</title>
+  <title>Shabbat Menu — Chefaleh Private Chef Delivery in Miami</title>
+  <meta name="description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered to Miami Beach, Aventura, Fort Lauderdale and surrounding South Florida areas. Order online for Friday delivery."/>
+  <link rel="canonical" href="https://chefaleh.com/menu.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Chefaleh"/>
+  <meta property="og:title" content="Shabbat Menu — Chefaleh Private Chef Delivery in Miami"/>
+  <meta property="og:description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered across South Florida."/>
+  <meta property="og:url" content="https://chefaleh.com/menu.html"/>
+  <meta property="og:image" content="https://chefaleh.com/images/food1.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Shabbat Menu — Chefaleh Private Chef Delivery in Miami"/>
+  <meta name="twitter:description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered across South Florida."/>
+  <meta name="twitter:image" content="https://chefaleh.com/images/food1.jpg"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
   <script>
@@ -380,7 +392,7 @@ function makeCard(item) {
   const dark = item.dark;
   const imgH = item.small ? 'height:180px' : 'height:230px';
   const imgEl = item.img
-    ? `<img src="${item.img}" alt="${item.name}" class="cimg w-full h-full object-cover object-center" onerror="this.style.display='none'"/>`
+    ? `<img src="${item.img}" alt="${item.name}" class="cimg w-full h-full object-cover object-center" loading="lazy" onerror="this.style.display='none'"/>`
     : '';
   const tagEl = item.tag
     ? `<span class="absolute top-4 left-4 z-10 ${item.tag==='Signature'?'bg-gold text-charcoal':'bg-charcoal text-cream'} text-[10px] px-3 py-1 tracking-wider font-medium">${item.tag}</span>`
