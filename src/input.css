@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Shared base reset (was duplicated inline on every page) ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; color-scheme: light; }
+body { background: #F9F7F2; color: #1A1A1A; font-family: 'Jost', sans-serif; }
+
+.gold-bar { height: 1px; background: linear-gradient(to right, transparent, #D4AF37, transparent); }
+.gold-bar-left { height: 2px; width: 50px; background: #D4AF37; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F9F7F2; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 2px; }
+
+#mobile-menu { display: none; }
+#mobile-menu.open { display: flex; }
+
+/* ── Home hero ── */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fadeUp .9s ease forwards; }
+
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,8,5,.60) 0%, rgba(10,8,5,.38) 45%, rgba(10,8,5,.78) 100%); }
+
+/* nav transparent on top of hero */
+nav.scrolled { background: rgba(26,26,26,.97) !important; border-color: rgba(212,175,55,.15) !important; }
+nav.scrolled .nav-logo { color: #F9F7F2 !important; }
+nav.scrolled .nav-link { color: rgba(249,247,242,.55) !important; }
+nav.scrolled .nav-link:hover { color: #D4AF37 !important; }
+nav.scrolled .nav-link.active { color: #D4AF37 !important; }
+
+.hover-zoom { overflow: hidden; }
+.hover-zoom img { transition: transform .75s cubic-bezier(.25,.46,.45,.94); }
+.hover-zoom:hover img { transform: scale(1.06); }
+
+/* zone card highlight */
+.zone-featured { background: #2C2C2C; border-top: 2px solid #D4AF37; }
+
+/* dish stagger */
+.dish-mid { margin-top: 3rem; }
+@media (max-width: 767px) { .dish-mid { margin-top: 0; } }
+
+/* ── Cart drawer (index/about/menu/checkout) ── */
+#drawer { transition: transform .35s ease; }
+#drawer.open { transform: translateX(0) !important; }
+
+/* ── Menu page ── */
+.mcard { transition: transform .3s ease, box-shadow .3s ease; }
+.mcard:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(26,26,26,.12); }
+.mcard .cimg { transition: transform .6s ease; }
+.mcard:hover .cimg { transform: scale(1.07); }
+.mcard .cta-row { display: flex; align-items: center; gap: 8px; }
+@media (min-width: 768px) {
+  .mcard .cta-row.hide-desktop { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .3s ease, opacity .3s ease; display: block; }
+  .mcard:hover .cta-row.hide-desktop { max-height: 60px; opacity: 1; display: flex; }
+}
+.snav a { border-bottom: 2px solid transparent; transition: all .2s; }
+.snav a:hover, .snav a.act { color: #D4AF37; border-bottom-color: #D4AF37; }
+#instr-modal { display: none; }
+#instr-modal.open { display: flex; }
+
+@keyframes summerLetterIn {
+  0%   { opacity: 0; transform: translateY(55px) scale(.9); filter: blur(6px); }
+  60%  { filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes summerFade {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Checkout page keeps its own inline <style> block (page-specific, not shared) */
+
+/* ── Admin panel (system-ui, not the serif/gold theme) ── */
+body.admin-body { font-family: system-ui, sans-serif; background: #f5f5f5; }
+.drag-over { outline: 2px dashed #3b82f6; background: #eff6ff; }
+.handle { cursor: grab; user-select: none; }
+.handle:active { cursor: grabbing; }
+[draggable] { transition: opacity 0.15s; }
+[draggable].dragging { opacity: 0.4; }
+.label { display: block; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; font-weight: 500; }
+.input { width: 100%; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 12px; font-size: 13px; outline: none; }
+.input:focus { border-color: #6366f1; }
+select.input { background: white; }
+
+/* ── Explicit color-opacity utilities ──
+   Tailwind's JIT does not generate slash-opacity modifiers for custom
+   theme colors at these specific fractions, so they're hardcoded here. */
+.text-cream\/38  { color: rgba(249,247,242,.38) !important; }
+.text-cream\/22  { color: rgba(249,247,242,.22) !important; }
+.text-cream\/28  { color: rgba(249,247,242,.28) !important; }
+.text-cream\/48  { color: rgba(249,247,242,.48) !important; }
+.text-cream\/18  { color: rgba(249,247,242,.18) !important; }
+.text-charcoal\/38 { color: rgba(26,26,26,.38) !important; }
+.text-charcoal\/48 { color: rgba(26,26,26,.48) !important; }
+.text-gold\/20   { color: rgba(212,175,55,.20) !important; }
+.bg-gold\/6      { background-color: rgba(212,175,55,.06) !important; }
+.bg-gold\/5      { background-color: rgba(212,175,55,.05) !important; }
+.bg-gold\/8      { background-color: rgba(212,175,55,.08) !important; }
+.bg-white\/6     { background-color: rgba(255,255,255,.06) !important; }
+.hover\:bg-gold\/6:hover { background-color: rgba(212,175,55,.06) !important; }
+.border-charcoal\/6 { border-color: rgba(26,26,26,.06) !important; }
+.border-charcoal\/8 { border-color: rgba(26,26,26,.08) !important; }
+.border-cream\/8    { border-color: rgba(249,247,242,.08) !important; }
+.border-white\/8    { border-color: rgba(255,255,255,.08) !important; }
+
+/* ── Blog ── */
+.prose-blog h2 { font-family: 'Cormorant Garamond', serif; }
+.prose-blog p + p { margin-top: 1.1em; }
