@@ -613,6 +613,7 @@
         <div class="flex-1 min-w-0 pr-4">
           <div class="item-name">${escapeHtml(i.name)}</div>
           ${i.badge ? `<div class="item-badge">${escapeHtml(i.badge)}</div>` : ''}
+          ${i.glutenFree ? `<div class="item-badge" style="color:#B8941F">Gluten-Free</div>` : ''}
           ${i.instructions ? `<div class="item-instr">"${escapeHtml(i.instructions)}"</div>` : ''}
         </div>
         <div class="text-right shrink-0">

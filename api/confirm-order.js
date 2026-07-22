@@ -21,6 +21,7 @@ export default async function handler(req, res) {
       <tr>
         <td style="padding:10px 14px;border-bottom:1px solid #f0ede6;font-family:Georgia,serif;font-size:15px;color:#1a1a1a">
           ${i.name}
+          ${i.glutenFree ? `<div style="font-size:12px;color:#D4AF37;font-weight:700;margin-top:2px">🌾 Gluten-Free</div>` : ''}
           ${i.instructions ? `<div style="font-size:12px;color:#D4AF37;font-style:italic;margin-top:2px">Note: ${i.instructions}</div>` : ''}
         </td>
         <td style="padding:10px 14px;border-bottom:1px solid #f0ede6;color:#999;font-size:13px;text-align:center">×${i.qty}</td>
