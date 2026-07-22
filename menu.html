@@ -4,17 +4,17 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shabbat Menu — Chefaleh Private Chef Delivery in Miami</title>
-  <meta name="description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered to Miami Beach, Aventura, Fort Lauderdale and surrounding South Florida areas. Order online for Friday delivery."/>
+  <meta name="description" content="Browse Chefaleh's private-chef Shabbat menu — traditional dishes alongside new Peruvian & Ecuadorian flavors by Chef John Jones Angulio. Delivered fresh to Miami Beach, Aventura, Fort Lauderdale and surrounding South Florida areas."/>
   <link rel="canonical" href="https://chefaleh.com/menu.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Chefaleh"/>
   <meta property="og:title" content="Shabbat Menu — Chefaleh Private Chef Delivery in Miami"/>
-  <meta property="og:description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered across South Florida."/>
+  <meta property="og:description" content="Browse Chefaleh's private-chef Shabbat menu — traditional dishes alongside new Peruvian & Ecuadorian flavors by Chef John Jones Angulio."/>
   <meta property="og:url" content="https://chefaleh.com/menu.html"/>
   <meta property="og:image" content="https://chefaleh.com/images/food1.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Shabbat Menu — Chefaleh Private Chef Delivery in Miami"/>
-  <meta name="twitter:description" content="Browse Chefaleh's private-chef Shabbat menu — fresh, ready-to-heat dinners delivered across South Florida."/>
+  <meta name="twitter:description" content="Browse Chefaleh's private-chef Shabbat menu — traditional dishes alongside new Peruvian & Ecuadorian flavors by Chef John Jones Angulio."/>
   <meta name="twitter:image" content="https://chefaleh.com/images/food1.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -43,22 +43,6 @@
       <button onclick="saveModal()" class="flex-1 bg-gold text-charcoal py-3 text-xs tracking-widest uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">Save & Add to Cart</button>
       <button onclick="closeModal()" class="px-5 border border-charcoal/15 text-charcoal/50 text-xs tracking-wider uppercase font-light hover:border-charcoal hover:text-charcoal transition-all">Cancel</button>
     </div>
-  </div>
-</div>
-
-<!-- CART DRAWER -->
-<div id="drawer-overlay" class="fixed inset-0 bg-charcoal/40 z-50 hidden" onclick="closeDrawer()"></div>
-<div id="drawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-full bg-cream z-50 flex flex-col shadow-2xl" style="transform:translateX(100%)">
-  <div class="flex items-center justify-between px-6 py-5 border-b border-charcoal/10">
-    <h3 class="font-serif text-xl text-charcoal font-light">Your Cart</h3>
-    <button onclick="closeDrawer()" class="text-charcoal/40 hover:text-charcoal text-xl">✕</button>
-  </div>
-  <div id="drawer-items" class="flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
-  <div class="border-t border-charcoal/10 px-6 py-5 space-y-2 bg-cream-dark">
-    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Subtotal</span><span id="d-sub">$0.00</span></div>
-    <div class="flex justify-between text-xs text-charcoal/50 font-light"><span>Tax (7%)</span><span id="d-tax">$0.00</span></div>
-    <div class="flex justify-between text-sm text-charcoal font-medium pt-2 border-t border-charcoal/10"><span>Estimated Total</span><span id="d-tot">$0.00</span></div>
-    <a href="/checkout.html" class="block mt-4 bg-gold text-charcoal text-center py-3 text-xs tracking-widest uppercase font-medium hover:bg-charcoal hover:text-cream transition-all">Proceed to Checkout</a>
   </div>
 </div>
 
@@ -159,6 +143,7 @@
 <!-- STICKY SUBNAV -->
 <div class="snav sticky top-[65px] md:top-[72px] z-30 bg-cream border-b border-charcoal/8 overflow-x-auto">
   <div class="max-w-7xl mx-auto px-2 md:px-8 flex">
+    <a href="#peruvian"  class="px-5 py-4 text-xs tracking-[.2em] uppercase text-charcoal/40 font-light whitespace-nowrap">Peruvian &amp; Ecuadorian</a>
     <a href="#challah"   class="px-5 py-4 text-xs tracking-[.2em] uppercase text-charcoal/40 font-light whitespace-nowrap">Challah</a>
     <a href="#salads"    class="px-5 py-4 text-xs tracking-[.2em] uppercase text-charcoal/40 font-light whitespace-nowrap">Salads</a>
     <a href="#soups"     class="px-5 py-4 text-xs tracking-[.2em] uppercase text-charcoal/40 font-light whitespace-nowrap">Soups</a>
@@ -170,6 +155,21 @@
   </div>
 </div>
 
+<!-- ===== PERUVIAN & ECUADORIAN ===== -->
+<section id="peruvian" class="py-20 bg-cream-dark">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="mb-10 md:mb-14">
+      <p class="text-gold text-xs tracking-[.3em] uppercase mb-2 font-light">New — By Chef John Jones Angulio</p>
+      <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Peruvian &amp; Ecuadorian</h2>
+      <p class="text-charcoal/40 text-xs font-light mt-2">Half the menu, all the flavor — ceviches, aji-spiced stews and Latin classics alongside our traditional Shabbat fare</p>
+      <div class="gold-bar-left mt-4"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-peruvian"></div>
+  </div>
+</section>
+
+<div style="height:60px;background:linear-gradient(to bottom,#EFEDE6,#F9F7F2)"></div>
+
 <!-- ===== CHALLAH ===== -->
 <section id="challah" class="py-20 bg-cream">
   <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -178,7 +178,7 @@
       <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Challah & Bread</h2>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="g-challah"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-challah"></div>
   </div>
 </section>
 
@@ -192,7 +192,7 @@
       <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Salads & Dips</h2>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="g-salads"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-salads"></div>
   </div>
 </section>
 
@@ -206,7 +206,7 @@
       <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Soups</h2>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="g-soups"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-soups"></div>
   </div>
 </section>
 
@@ -220,7 +220,7 @@
       <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Fish</h2>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="g-fish"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-fish"></div>
   </div>
 </section>
 
@@ -234,7 +234,7 @@
       <h2 class="font-serif text-charcoal font-light" style="font-size:clamp(2rem,4vw,3rem)">Poultry</h2>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="g-poultry"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="g-poultry"></div>
   </div>
 </section>
 
@@ -249,7 +249,7 @@
       <p class="text-cream/30 text-xs font-light mt-2">Premium beef — the crown of your Shabbat table</p>
       <div class="gold-bar-left mt-4"></div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5" id="g-meat"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5" id="g-meat"></div>
   </div>
 </section>
 
